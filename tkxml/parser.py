@@ -1,6 +1,6 @@
 import tkinter as tk
 import xml.etree.ElementTree as XmlTree
-import components
+from . import components
 
 def xml2element(element: XmlTree.Element,expose_dict, parent_element=None):
     tag = element.tag
@@ -26,7 +26,5 @@ def parse_xml(string):
     root_object = xml2element(root,expose_dict)
     return root_object, expose_dict
 
-if __name__ == "__main__":
-    root, exposed = parse_xml(open("test.xml").read())
-    exposed["my_label"].configure(text="I Changed!")
-    root.mainloop()
+def parse_xml_file(file):
+    return parse_xml(open(file).read())
