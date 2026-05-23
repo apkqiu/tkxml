@@ -1,6 +1,12 @@
 
-<tk:Tk xmlns="builtin" xmlns:tk="tkinter" title="My Tkinter App">
-    <tk:Label pack.side="left" font="Arial 20">
+<tk:Tk 
+xmlns="builtin" 
+xmlns:tk="tkinter" 
+xmlns:x="extensions" 
+
+title="My Tkinter App"
+>
+    <tk:Label pack.side="left" font="Arial 20" x:expose="my_label">
         Click ME!
     </tk:Label>
 </tk:Tk>
