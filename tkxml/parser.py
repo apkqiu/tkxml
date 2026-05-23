@@ -27,4 +27,4 @@ def parse_xml(string):
     return root_object, expose_dict
 
 def parse_xml_file(file):
-    return parse_xml(open(file).read())
+    return parse_xml(open(file,encoding="utf-8").read())
